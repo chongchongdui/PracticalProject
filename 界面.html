@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="createTable()">查看数据界面</button>
+	</body>
+	<script>
+	var users = [
+			
+			{book:"Python编程 从入门到实践 第2版(图灵出品)",price:"62.3",evaluate:"20万+条评价",press:"人民邮电出版社"},
+			{book:"Python编程三剑客：Python编程从入门到实践第2版+快速上手第2版+极客编程（套装共3册）",price:"165.5",evaluate:"5万+条评价",press:"人民邮电出版社"},
+			{book:"Java核心技术系列书籍共8册：卷1+卷2+并发编程实战+并发编程的艺术+深入理解Java虚拟机 等",price:"638",evaluate:"6条评价",press:"芝麻开门图书专营店"},
+			{book:"Go语言高并发与微服务实战",price:"85.4",evaluate:"1万+条评价",press:"中国铁道出版社"},
+			{book:"Java从入门到精通（第5版）",price:"34.9",evaluate:"10万+条评价",press:"清华大学出版社"},
+			{book:"java从入门到精通(第5版) Java语言程序设计编程入门自学零基础计算机软件开发教程书籍JAVA",price:"28.8",evaluate:"5000+条评价",press:"墨马图书旗舰店3个商家, ¥2880.00起"},
+			{book:"汇编语言（第4版） 王爽 汇编语言程序设计 教程 编程书籍计算机编程 汇编语言程序设计",price:"39.8",evaluate:"86条评价",press:"芝麻开门图书专营店"},
+			{book:"零基础学Python（编程入门 项目实践 同步视频）（Python3全彩版）",price:"37.5",evaluate:"20万+条评价",press:"明日科技京东自营旗舰店"},
+			{book:"架构师修炼之道",price:"88.1",evaluate:"2000+条评价",press:"华中科技大学出版社"},
+			{book:"O'Reilly：Head First设计模式（中文版）",price:"58.6",evaluate:"10万+条评价",press:"中国电力出版社"},
+		];
+		
+		function createTable(){
+			var mytable = document.createElement("TABLE");
+			mytable.border = "1";
+			mytable.cellpadding= "10";
+			
+			for(var i = 0;i < users.length;i++){
+				var myrow = document.createElement("tr");
+				
+				myrow.setAttribute("id","tabe")
+				var mycell1 = document.createElement("td");
+				var mytext1 = document.createTextNode(users[i].book);
+				mycell1.appendChild(mytext1);
+				myrow.appendChild(mycell1);
+				
+				myrow.setAttribute("id","tabe")
+				var mycell2 = document.createElement("td");
+				var mytext2 = document.createTextNode(users[i].price);
+				mycell2.appendChild(mytext2);
+				myrow.appendChild(mycell2);
+				
+				var mycell3 = document.createElement("td");
+				var mytext3 = document.createTextNode(users[i].evaluate);
+				mycell3.appendChild(mytext3);
+				myrow.appendChild(mycell3);
+				
+				var mycell4 = document.createElement("td");
+				var mytext4 = document.createTextNode(users[i].press);
+				mycell4.appendChild(mytext4);
+				myrow.appendChild(mycell4);
+				
+	
+
+					mytable.appendChild(myrow);
+				
+			}
+			document.body.appendChild(mytable);
+			
+		}
+		
+		</script>
+</html>
